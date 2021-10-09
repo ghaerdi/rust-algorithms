@@ -8,5 +8,6 @@ fn main() {
   arr.shuffle(&mut rand::thread_rng());
   sort::merge(&mut arr);
 
+
   println!("array after merge sorted: {:?}", arr);
 }
