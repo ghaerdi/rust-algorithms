@@ -1,8 +1,12 @@
 #![allow(dead_code)]
-mod sort;
 mod other;
+mod sort;
+use rand::seq::SliceRandom;
 
 fn main() {
-  let result = other::fibonacci(10);
-  println!("{}", result);
+  let mut arr = (0..5).collect::<Vec<i32>>();
+  arr.shuffle(&mut rand::thread_rng());
+  sort::merge(&mut arr);
+
+  println!("array after merge sorted: {:?}", arr);
 }
