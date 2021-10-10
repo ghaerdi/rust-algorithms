@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# run test
+cargo test
+
+# format the code and commit it
+cargo fmt
+git add .
+git commit -m "formatting"
