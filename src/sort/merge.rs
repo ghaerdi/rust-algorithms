@@ -1,11 +1,9 @@
-use std::fmt::Debug;
-
-pub fn merge<T: Debug + Clone + Ord>(arr: &mut [T]) {
+pub fn merge<T: Clone + Ord>(arr: &mut [T]) {
   let len = arr.len();
   merge_sort(arr, 0, len - 1);
 }
 
-fn merge_sort<T: Debug + Clone + Ord>(arr: &mut [T], start: usize, end: usize) {
+fn merge_sort<T: Clone + Ord>(arr: &mut [T], start: usize, end: usize) {
   if start >= end {
     return;
   }
@@ -16,7 +14,7 @@ fn merge_sort<T: Debug + Clone + Ord>(arr: &mut [T], start: usize, end: usize) {
   sort(arr, start, mid, end);
 }
 
-fn sort<T: Debug + Clone + Ord>(arr: &mut [T], left: usize, mid: usize, right: usize) {
+fn sort<T: Clone + Ord>(arr: &mut [T], left: usize, mid: usize, right: usize) {
   let n1 = mid - left + 1;
   let n2 = right - mid;
 
