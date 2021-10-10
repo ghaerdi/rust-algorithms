@@ -6,4 +6,4 @@ cargo test
 # format the code and commit it
 cargo fmt
 git add .
-git commit -m "formatting"
+git diff --quiet && git diff --staged --quiet || git commit -m "format"
