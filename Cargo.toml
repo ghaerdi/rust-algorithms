@@ -7,3 +7,8 @@ edition = "2018"
 
 [dependencies]
 rand = "0.8.4"
+
+[[bin]]
+doc = false
+name = "prepare"
+path = "src/bin/prepare.rs"
