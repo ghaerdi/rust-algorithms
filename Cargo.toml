@@ -10,5 +10,10 @@ rand = "0.8.4"
 
 [[bin]]
 doc = false
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+doc = false
 name = "prepare"
 path = "src/bin/prepare.rs"
