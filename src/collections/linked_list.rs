@@ -38,3 +38,17 @@ impl<T> LinkedList<T> {
     self.len += 1;
   }
 }
+
+#[cfg(test)]
+mod test {
+	use super::*;
+
+	#[test]
+	fn create_linked_list_with_numbers() {
+		let mut list = LinkedList::new();
+		list.push(1);
+		list.push(2);
+		list.push(3);
+		assert_eq!(list.len, 3);
+	}
+}
